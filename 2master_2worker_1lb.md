@@ -108,7 +108,7 @@ backend kubernetes-master-nodes
 listen stats 192.168.125.89:8080
     mode http
     stats enable
-    stats urii /
+    stats uri /
     stats realm HAProxy Statistics
     stats auth admin:haproxy
 ```
