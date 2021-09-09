@@ -1,6 +1,6 @@
 Below are our requirements for the installation:
 ```
-1.  1 servers for HAProxy with Keepalived, running CentOS 7
+1.  1 servers for HAProxy, running CentOS 7
 2.  2 servers for control-plane nodes, running CentOS 7
 3.  2 servers for worker nodes, running CentOS 7
 4.  Full network connectivity between all machines in the cluster.
@@ -36,7 +36,7 @@ Unfortunatelly I could not find supported Docker versions in the Relase Notes fo
 
 SELinux set to enforcing mode and firewalld is enabled on all servers.
 
-1 Install and Configure HAProxy Load Balancer with Keepalived
+1 Install and Configure HAProxy Load Balancer
 -------------------------------------------------------------
 
 Run these commands on both servers **master-1** and **master-2**.
@@ -53,11 +53,6 @@ Configure firewall to allow inbound traffic for HAProxy stats:
 $ sudo firewall-cmd --permanent --add-port=8080/tcp
 $ sudo firewall-cmd --reload
 ```
-Configure firewall to allow VRRP traffic to pass between the keepalived nodes:
-```
-$ sudo firewall-cmd --permanent --add-rich-rule='rule protocol value="vrrp" accept'
-$ sudo firewall-cmd --reload
-```
 ### 1.2 Configure SELinux
 
 Allow HAProxy to listen on kube-apiserver port 6443:
@@ -66,7 +61,7 @@ $ sudo semanage port -a -t http_cache_port_t 6443 -p tcp
 ```
 ### 1.3 Install Packages
 ```
-$ sudo yum install -y haproxy keepalived psmisc
+$ sudo yum install -y haproxy psmisc
 ```
 ### 1.4 Configure HAProxy
 
@@ -463,7 +458,7 @@ kube-system   replicaset.apps/coredns-f9fd979d6                    2         2  
 ```
 This concludes the Kubernetes homelab cluster installation using kubeadm.Below are our requirements for the installation:
 ```
-1.  1 servers for HAProxy with Keepalived, running CentOS 7
+1.  1 servers for HAProxy, running CentOS 7
 2.  2 servers for control-plane nodes, running CentOS 7
 3.  2 servers for worker nodes, running CentOS 7
 4.  Full network connectivity between all machines in the cluster.
@@ -499,7 +494,7 @@ Unfortunatelly I could not find supported Docker versions in the Relase Notes fo
 
 SELinux set to enforcing mode and firewalld is enabled on all servers.
 
-1 Install and Configure HAProxy Load Balancer with Keepalived
+1 Install and Configure HAProxy Load Balancer
 -------------------------------------------------------------
 
 Run these commands on both servers **master-1** and **master-2**.
@@ -516,11 +511,6 @@ Configure firewall to allow inbound traffic for HAProxy stats:
 $ sudo firewall-cmd --permanent --add-port=8080/tcp
 $ sudo firewall-cmd --reload
 ```
-Configure firewall to allow VRRP traffic to pass between the keepalived nodes:
-```
-$ sudo firewall-cmd --permanent --add-rich-rule='rule protocol value="vrrp" accept'
-$ sudo firewall-cmd --reload
-```
 ### 1.2 Configure SELinux
 
 Allow HAProxy to listen on kube-apiserver port 6443:
@@ -529,7 +519,7 @@ $ sudo semanage port -a -t http_cache_port_t 6443 -p tcp
 ```
 ### 1.3 Install Packages
 ```
-$ sudo yum install -y haproxy keepalived psmisc
+$ sudo yum install -y haproxy psmisc
 ```
 ### 1.4 Configure HAProxy
 
