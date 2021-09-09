@@ -920,4 +920,5 @@ kube-system   replicaset.apps/calico-kube-controllers-744cfdf676   1         1  
 kube-system   replicaset.apps/coredns-f9fd979d6                    2         2         2       6h13m
 ```
 This concludes the Kubernetes homelab cluster installation using kubeadm.
-`https://www.lisenet.com/2021/install-and-configure-a-multi-master-ha-kubernetes-cluster-with-kubeadm-haproxy-and-keepalived-on-centos-7/`
+
+https://www.lisenet.com/2021/install-and-configure-a-multi-master-ha-kubernetes-cluster-with-kubeadm-haproxy-and-keepalived-on-centos-7/
