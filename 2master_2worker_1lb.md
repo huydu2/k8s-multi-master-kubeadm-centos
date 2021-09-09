@@ -610,7 +610,7 @@ Set up the repository. Add the following to `/etc/yum.repos.d/kubernetes.repo`:
 ```
 [kubernetes]
 name=Kubernetes
-baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
+baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-$basearch
 enabled=1
 gpgcheck=1
 repo_gpgcheck=1
