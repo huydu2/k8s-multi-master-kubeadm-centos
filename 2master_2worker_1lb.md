@@ -320,32 +320,30 @@ c4161499f1f614322ea788831b4f72529175712c7c6f8888cdc14f5aab83fbce
 [kubelet-finalize] Updating "/etc/kubernetes/kubelet.conf" to point to a rotatable kubelet client certificate and key
 [addons] Applied essential addon: CoreDNS
 [addons] Applied essential addon: kube-proxy
-```
 Your Kubernetes control-plane has initialized successfully!
 
 To start using your cluster, you need to run the following as a regular user:
-```
   mkdir -p $HOME/.kube
   sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
   sudo chown $(id -u):$(id -g) $HOME/.kube/config
-```
+  
 You should now deploy a pod network to the cluster.
 Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
   https://kubernetes.io/docs/concepts/cluster-administration/addons/
 
 You can now join any number of the control-plane node running the following command on each as root:
-```
+
   kubeadm join bastion:6443 --token 8rd7kq.kcg3bkzkzdus8v54 \
     --discovery-token-ca-cert-hash sha256:4efb75f7e09c0a2a9db0d317dd40ac9cf9906c31109a670428d0d49981264904 \
     --control-plane --certificate-key c4161499f1f614322ea788831b4f72529175712c7c6f8888cdc14f5aab83fbce
-```
+
 Please note that the certificate-key gives access to cluster sensitive data, keep it secret!
 As a safeguard, uploaded-certs will be deleted in two hours; If necessary, you can use
-`"kubeadm init phase upload-certs --upload-certs" `
+"kubeadm init phase upload-certs --upload-certs" 
 to reload certs afterward.
 
 Then you can join any number of worker nodes by running the following on each as root:
-```
+
 kubeadm join bastion:6443 --token 8rd7kq.kcg3bkzkzdus8v54 \
     --discovery-token-ca-cert-hash sha256:4efb75f7e09c0a2a9db0d317dd40ac9cf9906c31109a670428d0d49981264904_ 
 ```
