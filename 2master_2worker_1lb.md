@@ -229,7 +229,7 @@ $ sudo firewall-cmd --reload
 ```
 One interesting note here, I kept getting CoreDNS crashes like this one:
 
-_CoreDNS crashes with error “Failed to list v1.Service: Get https://10.96.0.1:443/api/v1/\*\*\*: dial tcp 10.96.0.1:443: connect: no route to host”._
+CoreDNS crashes with error “Failed to list v1.Service: Get https://10.96.0.1:443/api/v1/***: dial tcp 10.96.0.1:443: connect: no route to host”.
 
 I added masquerade to firewalld and I think it helped fix the problem.
 
