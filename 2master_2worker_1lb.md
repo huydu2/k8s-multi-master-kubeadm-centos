@@ -107,7 +107,7 @@ listen stats 192.168.125.89:8080
     mode http
     stats enable
     stats uri /
-    stats realm HAProxy\ Statistics
+    stats realm HAProxy Statistics
     stats auth admin:haproxy
 ```
 Enable and start the haproxy service:
@@ -570,7 +570,7 @@ listen stats 192.168.125.89:8080
     mode http
     stats enable
     stats uri /
-    stats realm HAProxy\ Statistics
+    stats realm HAProxy Statistics
     stats auth admin:haproxy
 ```
 Enable and start the haproxy service:
