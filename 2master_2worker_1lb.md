@@ -8,6 +8,13 @@ Below are our requirements for the installation:
 6.  SSH access from one device to all nodes in the system.
 7.  A DNS server with a DNS entry for the HAProxy load balancer pointing to a virtual IP address 192.168.125.89.
 ```
+```
+192.168.125.89  bastion haproxy
+192.168.125.84  master-1
+192.168.125.87  master-2
+192.168.125.88  worker-1
+192.168.125.90  worker-2
+```
 My DNS record for HAProxy:
 
 **$ host bastion**
