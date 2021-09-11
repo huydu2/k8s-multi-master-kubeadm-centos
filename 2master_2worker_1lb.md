@@ -1,5 +1,6 @@
 ### Pre-requisites
 For Kubernetes, we will use 3 control-plane nodes and 3 worker nodes. We will also use 2 servers for HAProxy to provide high availability with IP addess of 192.168.125.89.
+
 **Below are our requirements for the installation:**
 
 This concludes the Kubernetes homelab cluster installation using kubeadm.Below are our requirements for the installation:
