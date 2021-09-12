@@ -24,6 +24,7 @@ This concludes the Kubernetes homelab cluster installation using kubeadm.Below a
 My DNS record for HAProxy:
 
 **$ host bastion**
+
 bastion has address 192.168.125.89
 
 Homelab details can be seen in the table below.
