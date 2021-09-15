@@ -236,7 +236,7 @@ $ sudo firewall-cmd --reload
 ```
 One interesting note here, I kept getting CoreDNS crashes like this one:
 
-_CoreDNS crashes with error “Failed to list v1.Service: Get https://10.96.0.1:443/api/v1/\*\*\*: dial tcp 10.96.0.1:443: connect: no route to host”._
+_CoreDNS crashes with error “Failed to list v1.Service: Get https://10.96.0.1:443/api/v1/***: dial tcp 10.96.0.1:443: connect: no route to host”._
 
 I added masquerade to firewalld and I think it helped fix the problem.
 
@@ -402,7 +402,7 @@ This node has joined the cluster and a new control plane instance was created:
 9 Join Worker Nodes to the Cluster
 ----------------------------------
 
-Run the following command on worker nodes **worker-1**, **worker-2** and **srv36**.
+Run the following command on worker nodes **worker-1**, **worker-2**.
 
 Note that your actual command will be different than what is provided below!
 
